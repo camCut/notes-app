@@ -2,7 +2,6 @@
 header("Content-Type: text/html; charset=utf-8");
 
 require "./notes.php";
-require "./saveToJson.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,20 +15,22 @@ require "./saveToJson.php";
 </head>
 <body>
 <div>
-    <form method="get" name="form" action="index.php">
-    <input type="text" class="title" placeholder="Titel"  name="noteTitle" id="title">
+    <form method="POST" name="form" action="index.php">
+    <input type="text" class="title" placeholder="Titel"  name="noteTitle">
     <br>
-    <textarea name="noteText" class="text" id="noteText" onfocus="this.value=''" rows="8" cols="60">Text</textarea>
+    <textarea name="noteText" class="text" onfocus="this.value=''" rows="8" cols="40">Text</textarea>
     <br>
     <input type="submit">
 </div>
    
  <?php
  
+deleteNote();
 submit();
 printNotes();
-// var_dump(getNotes());
-deleteNote();
+// echo '<pre>';
+// var_dump(getNotes()[0]);
+// echo '</pre>';
 
 ?>   
 

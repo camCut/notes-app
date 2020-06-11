@@ -1,3 +1,17 @@
+body 
+{
+     background-color: #fffef5;
+}
+table.note {
+
+     border: 1px;
+     border-color: #000000;
+}
+td.date {
+     font-size: 8px;
+     color: #333333;
+}
+
 div.noteEven
 {
      -moz-border-radius: 6px;
@@ -8,8 +22,11 @@ div.noteEven
      line-height: 18px;
      overflow: hidden;
      padding: 15px 60px;
-     width: 400px;
+     float: left;
+     margin: 10px;
+     width: 40%;
 }
+
 div.noteOdd
 {
      -moz-border-radius: 6px;
@@ -19,8 +36,10 @@ div.noteOdd
      border-radius: 6px;
      line-height: 18px;
      overflow: hidden;
-     padding: 15px 60px;
-     width: 400px;
+     padding: 5px 15px;
+     float: left;
+     margin: 10px;
+     width: 40%;
 }
 div.note
 {
@@ -29,10 +48,10 @@ div.note
      background-color: #fefce9;
      border: solid 1px #ecc91b;
      border-radius: 6px;
-     line-height: 18px;
-     overflow: hidden;
-     padding: 15px 60px;
-     width: 400px;
+     /* line-height: 18px; */
+     /* overflow: hidden; */
+     padding: 5px 15px;
+     width: 100px;
 }
 
 input.title
