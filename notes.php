@@ -9,19 +9,18 @@ function submit() {
       $tempArray[] = array('date'=>$noteDate, 'title'=>$noteTitle, 'text'=>$noteText);
 
       writeNotes($tempArray);
-      }
-      else{ 
-           return;
+    }
+    else{ 
+        return;
       
-      }
+    }
 }
     
 function deleteNote(){
     $allNotes = array_reverse(getNotes());
     for($i = 0; $i <count($allNotes); $i++) {
         if(isset($_POST[$i])) {
-            echo $i;
-            unset($allNotes[$i]);
+            array_splice($allNotes, $i, 1);
             writeNotes($allNotes);
         }
     }

@@ -21,12 +21,14 @@ require "./notes.php";
     <textarea name="noteText" class="text" onfocus="this.value=''" rows="8" cols="40">Text</textarea>
     <br>
     <input type="submit">
+    
+</form>
 </div>
    
  <?php
  
-deleteNote();
 submit();
+deleteNote();
 printNotes();
 // echo '<pre>';
 // var_dump(getNotes()[0]);
@@ -34,7 +36,6 @@ printNotes();
 
 ?>   
 
-</form>
 </body>
 </html>
 
