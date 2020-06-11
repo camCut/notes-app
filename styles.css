@@ -1,0 +1,60 @@
+div.noteEven
+{
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #e8f6f1;
+     border: solid 1px #89be9e;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 15px 60px;
+     width: 400px;
+}
+div.noteOdd
+{
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #f0f7fb;
+     border: solid 1px #3498db;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 15px 60px;
+     width: 400px;
+}
+div.note
+{
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #fefce9;
+     border: solid 1px #ecc91b;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 15px 60px;
+     width: 400px;
+}
+
+input.title
+{
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #e8f6f1;
+     border: solid 1px #89be9e;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 15px 60px;
+}
+
+textarea.text
+{
+     -moz-border-radius: 6px;
+     -webkit-border-radius: 6px;
+     background-color: #fefce9;
+     border: solid 1px #ecc91b;
+     border-radius: 6px;
+     line-height: 18px;
+     overflow: hidden;
+     padding: 15px 60px;
+}
