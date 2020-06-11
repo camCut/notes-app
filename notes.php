@@ -6,9 +6,6 @@ function submit() {
       $noteText = $_POST['noteText'];
       $noteDate = time();
       $tempArray = getNotes();
-      
-      
-      
       $tempArray[] = array('date'=>$noteDate, 'title'=>$noteTitle, 'text'=>$noteText);
 
       writeNotes($tempArray);
@@ -17,31 +14,24 @@ function submit() {
            return;
       
       }
-    }
+}
     
-    function deleteNote(){
-      
-    //   var_dump($_POST['deleteNote13']);
-          // var_dump($_POST['noteTitle']);
-        $allNotes = array_reverse(getNotes());
-        // print_r($allNotes);
-        for($i = 0; $i <count($allNotes); $i++) {
-          if(isset($_POST[$i])) {
+function deleteNote(){
+    $allNotes = array_reverse(getNotes());
+    for($i = 0; $i <count($allNotes); $i++) {
+        if(isset($_POST[$i])) {
             echo $i;
             unset($allNotes[$i]);
             writeNotes($allNotes);
-          }
+        }
+    }
+}
 
-      }
-
-      
-
-  }
-
-  function writeNotes($tempArray) {
+function writeNotes($tempArray) {
     $jsonData = json_encode($tempArray, JSON_PRETTY_PRINT);
-      file_put_contents('notes.json', $jsonData);
-  }
+    file_put_contents('notes.json', $jsonData);
+}
+
 function getNotes() {
     $contents = file_get_contents('notes.json');
     return $oldNotes = json_decode($contents);
