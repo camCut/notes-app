@@ -48,18 +48,16 @@ function getDivClass($key) {
 
 function printNotes(){
     $oldNotes = array_reverse(getNotes());
-    if($oldNotes != '') {    
-        // echo '<pre>';
-        // var_dump($oldNotes);
-        // echo '</pre>';
+    if($oldNotes != '') {
         foreach($oldNotes as $key=>$oldNote) {
             $divClass = getDivClass($key);
-                echo '  <div class="'.$divClass.'">  <table class="note">    <th> '.$oldNote->title.'</th>
+                echo '  <div class="'.$divClass.'">  <table class="note">    <th> Note '.++$key .' :'.$oldNote->title.'</th>
                                                                 <tr><td class="note">'.$oldNote->text.'</td></tr>
                                                                 <tr><td class="date">'.date('d.m.y, h:i', $oldNote->date).'</td></tr>
-                                                                <tr><td><form action="index.php" method="POST">
+                                                                <tr><td><form action="index.php" onsubmit="return confirm(\'Sicher?\');" method="POST">
                                                                         <input type="submit" class="deleteNote" value="delete Note" name="'.$key.'">
-                                                                        </form></td></tr>
+                                                                        </form>
+                                                                   </td></tr>
                                             </table>
                         </div><br>';
             
