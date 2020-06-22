@@ -17,12 +17,19 @@ function submit() {
 }
     
 function deleteNote(){
+
     $allNotes = array_reverse(getNotes());
-    for($i = 0; $i <count($allNotes); $i++) {
-        if(isset($_POST[$i])) {
-            array_splice($allNotes, $i, 1);
-            writeNotes($allNotes);
+    
+        for($i = 0; $i <= count($allNotes); $i++) {
+        if(isset($_POST[$i]) && $i != 0) {
+
+            array_splice($allNotes, $i-1, 1);
+            // echo '<pre>';
+            // var_dump($allNotes);
+            // echo '</pre>';
+            writeNotes(array_reverse($allNotes));
         }
+
     }
 }
 
@@ -32,8 +39,9 @@ function writeNotes($tempArray) {
 }
 
 function getNotes() {
-    $contents = file_get_contents('notes.json');
-    return $oldNotes = json_decode($contents);
+        $contents = file_get_contents('notes.json');
+        return $oldNotes = json_decode($contents);
+
 }
 function getDivClass($key) {
     switch ($key%2) {

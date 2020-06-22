@@ -2,11 +2,7 @@ body
 {
      background-color: #fffef5;
 }
-table.note {
 
-     border: 1px;
-     border-color: #000000;
-}
 td.date {
      font-size: 8px;
      color: #333333;
@@ -54,7 +50,7 @@ div.note
      width: 100px;
 }
 
-input.input
+div.input
 {
      -moz-border-radius: 6px;
      -webkit-border-radius: 6px;
@@ -63,11 +59,11 @@ input.input
      border-radius: 6px;
      line-height: 18px;
      overflow: hidden;
-     padding: 15px 60px;
+     padding: 15px 15px;
+     max-width: 40%;
 }
 
-textarea
-{
+input[type=text], input[type=textarea], input[type=submit], textarea, button {
      -moz-border-radius: 6px;
      -webkit-border-radius: 6px;
      background-color: #fefce9;
@@ -75,5 +71,6 @@ textarea
      border-radius: 6px;
      line-height: 18px;
      overflow: hidden;
-     padding: 15px 60px;
-}
+     padding: 5px 5px;
+   }
+   

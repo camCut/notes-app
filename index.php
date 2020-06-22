@@ -17,22 +17,19 @@ require "./notes.php";
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div>
-    <form method="POST" name="form" action="index.php">
-      <input type="text" class="input" placeholder="Titel"  name="noteTitle">
+<div  class="input">
+    <form  method="POST" name="form" action="index.php">
+      <input type="text" class="input" placeholder="Titel"   name="noteTitle">
       <br>
       <textarea name="noteText" class="input"  onfocus="this.value=''" rows="8" cols="40">Text</textarea>
       <br>
-      <input class="input" type="submit">
-  </form>
+      <input class="input" style="float: right" type="submit">
+  </form></div>
   <div>
   <button id="hideInput">Hide Input</button>
   <button id="hideNotes">Hide Notes</button>
-</div>
-<div>
 
-</div>
-
+<hr>
 
  <?php
  
